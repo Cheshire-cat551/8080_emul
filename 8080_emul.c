@@ -70,7 +70,53 @@ int disassemble(unsigned char* buffer, int pc){
 		case 0x1F:printf("RAR");break;
 		case 0x20:printf("No instruction");break;
 		case 0x21:printf("LXI H, #$%02x%02x",code[2],code[1]);break;
-		case 0x22:		
+		case 0x22:printf("SHLD $%02x%02x",code[2],code[1]);break;
+		case 0x23:printf("INX H");break;
+		case 0x24:printf("INR H");break;
+		case 0x25:printf("DCR H"):break;
+		case 0x26:printf("MVI H, #$%02x", code[1]);break;
+		case 0x27:printf("DAA"):break;
+		case 0x28:printf("No instruction");break;
+		case 0x29:printf("DAD H");break;
+		case 0x2A:printf("LHLD $%02x%02x",code[2],code[1]);break;
+		case 0x2B:printf("DCX H");break;
+		case 0x2C:printf("INR L");break;
+		case 0x2D:printf("DCR L");break;
+		case 0x2E:printf("MVI L, #$%02x", code[1]);break;
+		case 0x2F:printf("CMA");break;
+		case 0x30:printf("No instruction");break;
+		case 0x31:printf("LXI SP, #$%02x%02x",code[2],code[1]);break;
+		case 0x32:printf("STA $%02x%02x",code[2],code[1]);break;
+		case 0x33:printf("INX SP");break;
+		case 0x34:printf("INR M");break;
+		case 0x35:printf("DCR M");break;
+		case 0x36:printf("MVI M, #$%02x", code[1]);break;
+		case 0x37:printf("STC");break;
+		case 0x38:printf("No instruction");break;
+		case 0x39:printf("DAD SP");break;
+		case 0x3A:printf("LDA $%02x%02x",code[2],code[1]);break;
+		case 0x3B:printf("DCX SP");break;
+		case 0x3C:printf("INR A");break;
+		case 0x3D:printf("DCR A");break;
+		case 0x3E:printf("MVI A, #$%02x", code[1]);break;
+		case 0x3F:printf("CMC");break;
+		case 0x40:printf("MOV B,B");break;
+		case 0x41:printf("MOV B,C");break;
+		case 0x42:printf("MOV B,D");break;
+		case 0x43:printf("MOV B,E");break
+		case 0x44:printf("MOV B,H");break;
+		case 0x45:printf("MOV B,L");break;
+		case 0x46:printf("MOV B,M");break;
+		case 0x47:printf("MOV B,A");break;
+		case 0x48:printf("MOV c,B");break;
+		case 0x49:printf("MOV C,C");break;
+		case 0x4A:printf("MOV C,D");break;
+		case 0x4B:printf("MOV C,E");break;
+		case 0x4C:printf("MOV C,H");break;
+		case 0x4D:printf("MOv C,L");break;
+		case 0x4E:printf("MOV C,M");break;
+		case 0x4f:printf("MOV C,A");break;
+				
 	}	
 }
 
@@ -129,4 +175,5 @@ int main(void){
 	}
 	return 0;
 }
+
 
